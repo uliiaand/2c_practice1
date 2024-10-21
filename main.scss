@@ -1,0 +1,546 @@
+$maxWidth: 1440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin nav-bg {
+    background-color: #f8f8f8;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+}
+.container-fluid {
+    padding: 0;
+}
+.navbar {
+    font-size: 1rem;
+    color: black;
+}
+.nav-link{
+    color: black;
+}
+.bg-body-tertiary {
+    --bs-bg-opacity: 0;
+}
+.fw-weight-bolder {
+    font-weight: 700;
+}
+.fw-weight-bold {
+    font-weight: 600;
+}
+.img-fluid1 {
+    img {
+        z-index: 2;
+    }
+    width: 100%;
+    
+}
+.navbar-brand-phone {
+    display: none;
+}
+.img-fluid2 {
+    width: 100%;
+    @media (max-width: 1024px) {
+        width: 1024px; 
+        height: 530px; 
+        img {
+            overflow: hidden;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @media (max-width: 768px) {
+        width: 768px; 
+        height: 490px; 
+        img {
+            overflow: hidden;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @media (max-width: 375px) {
+        width: 375px; 
+        height: 490px; 
+        img {
+            overflow: hidden;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.img-fluid-phone {
+    display:none;
+}
+.txt-banner {
+    position: absolute;
+    width: 45%;
+    height: 170px;
+    top: 260px;
+    color: white;
+    z-index: 1;
+}
+.h2-banner {
+    font-size: calc(1.2rem + 0.5vw);
+    font-weight: 600;
+}
+.h1-banner {
+    font-size: calc(1.8rem + 0.5vw);
+    font-weight: 600;
+}
+.h3-banner {
+    font-size: calc(1rem + 0.5vw);
+    font-weight: 300;
+}
+.nav-text-tabs {
+    display: grid;
+    grid-template: 1fr / 1fr 100px;
+    grid-gap: 20px;
+    color: black;
+}
+small {
+    color: #4f4f4f;
+}
+.nav-tabs {
+    font-size: 17px;
+}
+.navbar {
+    --bs-navbar-toggler-border: none;
+}
+.navbar-brand {
+    img {
+        left: 0;
+    }
+}
+.nav-underline {
+    p {
+        text-align: left;
+    }
+}
+.tab-content {
+    width: 100%;
+    display: flex;
+}
+.tab-btn {
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px 0 rgb(154, 210, 255);
+}
+.tab-btn:hover {
+    box-shadow: 0 5px 15px 5px rgb(136, 202, 255);
+    position: relative;
+    padding: 15px;
+}
+.btn-tabs:hover, .btn-tabs {
+    border: none;
+}
+.custom-tooltip {
+    font-size: 1.2rem;
+    --bs-tooltip-bg: var(--bd-white-bg);
+    border: 2px solid #ecb55b;
+    border-radius: 10px;
+    --bs-tooltip-color: var(--bs-black);
+}
+.video {
+    width: 100%;
+}
+.experts-text {
+    font-size: 1.4rem;
+    width: 70%;
+}
+.professors, .graduates, .courses {
+    text-align: center;
+}
+.experts-txt {
+    font-size: 1.3rem;
+}
+.mcard-custom {
+    border-radius: 30px;
+    border: 0;
+    box-shadow: 0px 1px 10px 2px rgba($color: #ffeac9, $alpha: 2.0);
+}
+.modal-title {
+    font-size: calc(1rem + 0.5vw);
+    a {
+        text-decoration: none;        
+        color: black;
+        font-weight: 500;
+    }
+
+    a:hover {
+        font-size: calc(0.9rem + 0.5vw);
+        color: blue;
+    }
+}
+.modals1 {
+    background-color: #c7eeff;
+}
+.modals2 {
+    background-color: #ffce94;
+}
+.modals3 {
+    background-color: #ffe38e;
+}
+.modals4 {
+    background-color: #ddddff;
+}
+.modals5 {
+    background-color: #b8efcf;
+}
+.card-custom {
+    border-radius: 10px;
+    padding: 16px;
+    border: 0;
+    box-shadow: 0px 1px 10px 2px rgba($color: #ffeac9, $alpha: 2.0);
+    height: 100%;
+}
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    h5 {
+        font-size: 1.4rem;
+    }
+}
+.card-text {
+    font-size: 1.1rem;
+}
+.card1 {
+    background-color: #c5ddff;
+    .btn {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    border-radius: 30px;
+}
+.card2 {
+    background-color: #b8efcf;
+}
+.card3 {
+    background-color: #ffeef6;
+}
+.card4 {
+    background-color: #ffe38e;
+}
+.top-banner {
+    background-color: #F7BC75;
+    border: 0;
+    border-radius: 20px;
+    color: black;
+    h1 {
+        font-size: calc(5rem + 0.5vw);
+    }
+}
+.date {
+    h2 {
+        font-size: calc(1.5rem + 0.5vw);
+        margin-top: -15px;
+    }
+}
+.top-banner .btn {
+    border: 1px solid black;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.describe {
+    text-align: left;
+    max-width: 630px;
+    p {
+        font-size: calc(0.9rem + 0.5vw);
+    }
+}
+.comeback {
+    margin-top: 100px;
+}
+.comeback-head {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    margin-top: -455px;
+}
+
+.item {
+    max-width: 270px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.item-foto {
+    display: grid;
+    grid-template: 40px 50px / 40px 1fr;
+    grid-column-gap: 15px;
+    img {
+        grid-row: 1 / 3;
+    }
+}
+
+.item-describe {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.item-mark {
+    display: grid;
+    grid-template: 1fr / 10% 1fr;
+    grid-column-gap: 10px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next, .carousel-control-prev {
+    background-color: orange;
+    width: 55px;
+    height: 55px;
+    border-radius: 1000px;
+    margin-top: 110px;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: orange;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+}
+
+.col-lg-3{
+    max-width: 270px;
+    margin: 0 auto;
+}
+
+.container-fluid.comeback {
+    background-image: url('../images/Group 1182.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+
+
+@media (max-width: 1200px) {
+    .item-subname{
+        font-size: 14px;
+    }
+    .item-describe{
+        font-size: 14px;
+    }
+    .item-name1{
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .col-sm-6{
+        margin-bottom: 20px;
+    }
+}
+
+.carousel-indicators{
+    margin: 0px;
+    bottom: -25px;
+}
+
+.comeback-head{
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+}
+
+footer {
+    margin-top: 210px;
+    background-color: #00093C;
+    color: white;
+    h2 {
+        font-size: calc(0.7rem + 0.5vw);
+    }
+}
+.footer-owl {
+    position: absolute;
+    margin-top: -15px;
+}
+.footer-icons {
+    img {
+        width: 22px;
+        margin-right: 13px;
+        margin-top: 20px;
+    }
+}
+.footer-points {
+    h3 {
+        font-weight: 600;
+        font-size: calc(1rem + 0.5vw);
+        margin-bottom: 25px;
+    }
+    ul {
+        list-style-type: none;
+        a {
+            margin-bottom: 15px;
+            color: #ebebeb;
+            text-decoration: none;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+    }
+}
+.footer-info {
+    padding: 120px 50px;
+}
+.footer-end {
+    font-size: 0.9rem;
+    color: #d1d1d1;
+}
+
+@media (max-width: 1024px) {
+    .carousel-item {
+        .row {
+            flex-wrap: nowrap;
+            column-gap: 50px;
+            margin-left: 20px;
+        }
+    }
+    
+    .nav-link {
+        text-align: center;
+    }
+    .txt-banner {
+        top: 195px;
+    }
+    .top-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .date, .describe, .col-lg-3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .date h1, .date h2 {
+        text-align: center;
+    }
+    .describe h3, .describe p {
+        text-align: center;
+    }
+    .col-lg-3 button {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .bg-body-tertiary {
+        background-color: #00093C !important;
+    }
+    .img-fluid1 {
+        display: none;
+    }
+    .img-fluid-phone {
+        display: block;
+        width: 100%;
+    }
+    .txt-banner {
+        position: relative;        
+        top: 50px;
+        width: 80%;
+    }
+    .banner {
+        margin-left: 0;
+        width: 100%;
+        background-color: #00093C;
+        padding-bottom: 100px;
+    }
+    .navbar-brand {
+        display: none;
+    }
+    .navbar-brand-phone {
+        display: block;
+    }
+    .nav-link {
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    .navbar {
+        --bs-navbar-hover-color: orange;
+        --bs-navbar-active-color: orange;
+    }
+    .card2 {
+        padding: 5px;
+        .card-body {
+            padding: 15px 5px;
+        }
+    }
+    .footer-body {
+        margin-top: -50px;
+        .footer-info {
+            padding: 60px 40px;
+        }
+    }
+
+    .item1 {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .item1 {
+        margin-left: 20px;
+    }
+    .txt-banner {
+        top: 30px;
+        text-align: center;
+        margin: auto;
+    }
+    .btn-tabs {
+        margin-left: 0px;
+        width: 50%;
+    }
+    .custom-tooltip {
+        font-size: 1rem;
+        width: 40%;
+    }
+    .experts-text {
+        text-align:center;
+        margin: auto;
+        top: 50px;
+    }
+    .card2 {
+        margin-top: 20px;
+    }
+    .card3, .card4 {
+        margin-top: 40px;
+    }
+    .footer-owl {
+        width: 40%;
+    }
+    .footer-points {
+        padding: 0px 40px;
+    }
+
+    .modal-cont {
+        flex-direction: column;
+    }
+
+    .modal-courses1, .modal-courses2, .modal-courses3, .modal-courses4, .modal-courses5, .modal-courses6, .modal-courses7, .modal-courses8, .modal-courses9 {
+        width: 100%;
+    }
+    .modal-body {
+        text-align: center;
+        p {
+            display: none;
+        }
+    }
+}

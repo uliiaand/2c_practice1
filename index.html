@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+        
+    <header class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary mx-auto fw-weight-bold">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+                <a class="navbar-brand-phone" href="#"><img src="images/logo-footer.png"></a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-filter-right" viewBox="0 0 16 16">
+                        <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5m0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5m0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5"/>
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#myTab">Все курсы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cards">Мероприятия</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Базы знаний</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Карьера</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="images/location.png">    
+                                <u>Нижний Новгород</u>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Дзержинск</a></li>
+                                <li><a class="dropdown-item" href="#">Нижний Новгород</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">On-line</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">8 800 950-33-98</a>
+                        </li>
+                        <li class="nav-item nav-enter">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#enter">
+                                <img src="images/account.png">
+                                Войти
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Form -->
+    <form class="modal fade p-4" id="enter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content form-view p-4">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Мы никогда не нарушим вашу конфиденциальность.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <div id="passwordHelpBlock" class="form-text">
+                        Ваш пароль должен состоять из 8-20 символов, содержать буквы и цифры и не должен содержать пробелов, специальных символов или эмодзи.
+                    </div>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Запомнить меня</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Войти</button>
+            </div>
+        </div>
+    </form>
+
+    <main class="main">
+        <div class="banner row">
+            <div class="container-fluid img-banner col-12">
+                <img src="images/banner.png" class="img-fluid1" alt="баннер образовательной платформы">
+                <img src="images/375photo.png" class="img-fluid-phone" alt="баннер образовательной платформы">
+            </div>
+
+            <div class="container col-11">
+                <div class="txt-banner row justify-content-between">
+                    <h2 class="h2-banner">Образовательная платформа</h2>
+                    <h1 class="h1-banner">ХОД Future Academy</h1>
+                    <h3 class="h3-banner">Актуальные знания для новичков и профессионалов</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+        <!-- Nav tabs -->
+            <ul class="nav nav-underline justify-content-center pt-5 mb-5" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    
+                    <button
+                        class="nav-link active mx-4"
+                        id="children-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#children"
+                        type="button"
+                        role="tab"
+                        aria-controls="children"
+                        aria-selected="true"
+                    >
+                        <div class="nav-text-tabs">
+                            <img src="images/children.png">
+                            <p>
+                                Дети
+                                <br>
+                                <small>8-14 лет</small>
+                            </p>
+                        </div>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button
+                        class="nav-link mx-4"
+                        id="teens-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#teens"
+                        type="button"
+                        role="tab"
+                        aria-controls="teens"
+                        aria-selected="false"
+                    >
+                        <div class="nav-text-tabs">
+                            <img src="images/teens.png" class="tab-img-teens">
+                            <p>
+                                Подростки
+                                <br>
+                                <small>14-18 лет</small>
+                            </p>
+                        </div>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button
+                        class="nav-link mx-4"
+                        id="adults-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#adults"
+                        type="button"
+                        role="tab"
+                        aria-controls="adults"
+                        aria-selected="false"
+                    >                    
+                        <div class="nav-text-tabs">
+                            <img src="images/adults.png">
+                            <p>
+                                Взрослые
+                                <br>
+                                <small>18-&infin; лет</small>
+                            </p>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+            
+            <!-- Tab panes -->
+            <div class="tab-content justify-content-center">
+                <div
+                    class="tab-pane active"
+                    id="children"
+                    role="tabpanel"
+                    aria-labelledby="children-tab"
+                >
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Робототехника
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Создание игр
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Web-разработка
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Мультимедиа
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        3D-моделирование и дизайн
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Английский язык
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Блогинг
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Soft skills
+                    </button>
+                </div>
+                <div
+                    class="tab-pane"
+                    id="teens"
+                    role="tabpanel"
+                    aria-labelledby="teens-tab"
+                >
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Прикладное программирование
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Графическое моделирование
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Web-разработка
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Английский язык
+                    </button>
+                </div>
+                <div
+                    class="tab-pane"
+                    id="adults"
+                    role="tabpanel"
+                    aria-labelledby="adults-tab"
+                >
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Графический дизайн
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Программирование
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Разработчик игр на Unity
+                    </button>
+                    <button class="tab-btn p-3 me-3 mb-3 bg-white">
+                        Разработка ПО
+                    </button>
+                </div>
+            </div>
+
+            <button
+            type="button" class="btn-tabs mt-4 bg-white"
+            data-bs-toggle="tooltip" data-bs-placement="right"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Кем вы хотите стать? Пора найти себя 
+            и выбрать подходящий курс :) Удачи!">
+                <img src="images/owl.png" width="75%" class="tabs-img">
+            </button>
+
+            <img src="images/video.png" class="video mt-4">
+
+            <p class="experts-text fw-weight-bolder mt-5">Актуальные знания от признанных экспертов рынка для новичков и практикующих специалистов.</p>
+            <div class="row experts">
+                <div class="col-md-4 col-sm-1 courses">
+                    <img src="images/600.png" width="190px">
+                    <p class="experts-txt fw-weight-bold">Курсов</p>
+                </div>
+                <div class="col-md-3 professors">
+                    <img src="images/82.png" width="130px">
+                    <p class="experts-txt fw-weight-bold">Ведущих преподавателей</p>
+                </div>
+                <div class="col-md-5 graduates">
+                    <img src="images/14 795.png" width="300px">
+                    <p class="experts-txt fw-weight-bold">Выпускников</p>
+                </div>
+            </div>
+
+        <div class="container mt-5" id="cards">
+            <!-- Верхний блок -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="top-banner row justify-content-between align-items-center p-4 text-center">
+                        <div class="date col-lg-2 col-md-2 p-0">
+                            <h1 class="fw-weight-bolder m-0">25</h1>
+                            <h2 class="fw-weight-bold mb-0">ноября</h2>
+                        </div>
+                        <div class="describe col-lg-9 col-md-5">
+                            <h3>День открытых дверей</h3>
+                            <p class="mb-0">Приглашаем всех желающих на бесплатную экскурсию в мир востребованных профессий и полезных навыков</p>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <button class="btn btn-outline-dark pt-3 pb-3 ps-4 pe-4">Записаться</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Нижние карточки -->
+            <div class="row row-equal mt-4 d-flex">
+                <div class="col-md-6">
+                    <div class="card card-custom text-center card1 pt-4 pb-4 ps-2 pe-2">
+                        <div class="card-body">
+                            <img src="images/education.png" class="card-icon mb-4">
+                            <h5 class="card-title mb-4">Программы обучения</h5>
+                            <p class="card-text">В списке наших курсов вы сможете найти профессию и занятие по душе, изучить 
+                                новое и получить практические знания, которые помогут получить работу мечты..</p>
+                            <button class="btn btn-outline-dark mt-4 pt-3 pb-3 ps-4 pe-4" data-bs-toggle="modal" data-bs-target="#modal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Программы обучения</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="mt-2 mb-4 text-center">Выберите подходящий курс</h2>
+                                <div class="modal-cont container-fluid row row-cols-2 justify-content-between ms-0">
+                                    <div class="row mb-4 modal-courses1">
+                                        <div class="mcard mcard-custom text-left modals1 ps-4 pe-4 pt-5 pb-5">
+                                            <div class="mcard-body">
+                                                <p>Программа</p>
+                                                <div class="modal-title mb-2 ms-0">
+                                                    <a href="#">«Разработка мобильных приложений»</a>
+                                                </div>
+                                                <p>Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                                                    на смартфонах, умных часах и планшетах.
+                                                </p>
+                                                <p>24 месяца</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4 modal-courses2">
+                                        <div class="mcard mcard-custom text-left modals2 ps-4 pe-4 pt-5 pb-5">
+                                            <div class="mcard-body">
+                                                <p>Программа</p>
+                                                <div class="modal-title mb-2 ms-0">
+                                                    <a href="#">«Разработка мобильных приложений»</a>
+                                                </div>
+                                                <p>Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                                                    на смартфонах, умных часах и планшетах.
+                                                </p>
+                                                <p>24 месяца</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4 modal-courses3">
+                                        <div class="mcard mcard-custom text-left modals3 ps-4 pe-4 pt-5 pb-5">
+                                            <div class="mcard-body">
+                                                <p>Программа</p>
+                                                <div class="modal-title mb-2 ms-0">
+                                                    <a href="#">«Разработка мобильных приложений»</a>
+                                                </div>
+                                                <p>Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                                                    на смартфонах, умных часах и планшетах.
+                                                </p>
+                                                <p>24 месяца</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4 modal-courses4">
+                                        <div class="mcard mcard-custom text-left modals4 ps-4 pe-4 pt-5 pb-5">
+                                            <div class="mcard-body">
+                                                <p>Программа</p>
+                                                <div class="modal-title mb-2 ms-0">
+                                                    <a href="#">«Разработка мобильных приложений»</a>
+                                                </div>
+                                                <p>Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                                                    на смартфонах, умных часах и планшетах.
+                                                </p>
+                                                <p>24 месяца</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4 modal-courses5">
+                                        <div class="mcard mcard-custom text-left modals5 ps-4 pe-4 pt-5 pb-5">
+                                            <div class="mcard-body">
+                                                <p>Программа</p>
+                                                <div class="modal-title mb-2 ms-0">
+                                                    <a href="#">«Разработка мобильных приложений»</a>
+                                                </div>
+                                                <p>Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                                                    на смартфонах, умных часах и планшетах.
+                                                </p>
+                                                <p>24 месяца</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4 modal-courses6">
+                                        <div class="mcard mcard-custom text-left modals1 ps-4 pe-4 pt-5 pb-5">
+                                            <div class="mcard-body">
+                                                <p>Программа</p>
+                                                <div class="modal-title mb-2 ms-0">
+                                                    <a href="#">«Разработка мобильных приложений»</a>
+                                                </div>
+                                                <p>Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                                                    на смартфонах, умных часах и планшетах.
+                                                </p>
+                                                <p>24 месяца</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4 modal-courses7">
+                                        <div class="mcard mcard-custom text-left modals2 ps-4 pe-4 pt-5 pb-5">
+                                            <div class="mcard-body">
+                                                <p>Программа</p>
+                                                <div class="modal-title mb-2 ms-0">
+                                                    <a href="#">«Разработка мобильных приложений»</a>
+                                                </div>
+                                                <p>Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                                                    на смартфонах, умных часах и планшетах.
+                                                </p>
+                                                <p>24 месяца</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4 modal-courses8">
+                                        <div class="mcard mcard-custom text-left modals3 ps-4 pe-4 pt-5 pb-5">
+                                            <div class="mcard-body">
+                                                <p>Программа</p>
+                                                <div class="modal-title mb-2 ms-0">
+                                                    <a href="#">«Разработка мобильных приложений»</a>
+                                                </div>
+                                                <p>Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                                                    на смартфонах, умных часах и планшетах.
+                                                </p>
+                                                <p>24 месяца</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4 modal-courses9">
+                                        <div class="mcard mcard-custom text-left modals4 ps-4 pe-4 pt-5 pb-5">
+                                            <div class="mcard-body">
+                                                <p>Программа</p>
+                                                <div class="modal-title mb-2 ms-0">
+                                                    <a href="#">«Разработка мобильных приложений»</a>
+                                                </div>
+                                                <p>Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                                                    на смартфонах, умных часах и планшетах.
+                                                </p>
+                                                <p>24 месяца</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Да, хочу</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет, спасибо</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-equal d-flex flex-column">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card card-custom text-center card2">
+                                <div class="card-body">
+                                    <img src="images/news.png" class="card-icon mb-4">
+                                    <h5 class="card-title">Новости Академии</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card card-custom text-center card3">
+                                <div class="card-body">
+                                    <img src="images/it.png" class="card-icon mb-4">
+                                    <h5 class="card-title">Мир IT</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card card-custom text-center card4">
+                                <div class="card-body">
+                                    <img src="images/try.png" class="card-icon mb-4">
+                                    <h5 class="card-title">Попробуй!</h5>
+                                    <p class="card-text mt-4">Пройдите тест и узнайте свои способности в сфере информационных технологий.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="container-fluid comeback">
+            <h1 class="comeback-head fw-bold">Отзывы наших студентов</h1>
+    
+            <div id="carouselExampleIndicators" class="carousel slide container" data-bs-ride="carousel">
+                <div class="carousel-inner justify-content-center mt-5">
+                    <div class="carousel-item active" data-bs-interval="20000">
+                        <div class="row ">
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 item1">
+                                <div class="item p-3">
+                                    <div class="item-foto">
+                                        <img src="images/student1.png" class="d-block w-100">
+                                        <div class="item-name">
+                                            <p class="item-name1 fw-bold mb-1">Имя Фамилия</p>
+                                            <p class="item-subname"><small>Студент курса «WEB-разработчик»</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-describe">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus!</p>
+                                    </div>
+                                    <div class="item-mark">
+                                        <img src="images/star.png">
+                                        <p class="item-mark-num">4,87 / 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                <div class="item p-3">
+                                    <div class="item-foto">
+                                        <img src="images/student2.png" class="d-block w-100">
+                                        <div class="item-name">
+                                            <p class="item-name1 fw-bold mb-1">Имя Фамилия</p>
+                                            <p class="item-subname"><small>Студент курса «WEB-разработчик»</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-describe">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus!</p>
+                                    </div>
+                                    <div class="item-mark">
+                                        <img src="images/star.png">
+                                        <p class="item-mark-num">4,87 / 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 item1">
+                                <div class="item p-3">
+                                    <div class="item-foto">
+                                        <img src="images/student3.png" class="d-block w-100">
+                                        <div class="item-name">
+                                            <p class="item-name1 fw-bold mb-1">Имя Фамилия</p>
+                                            <p class="item-subname"><small>Студент курса «WEB-разработчик»</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-describe">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                    <div class="item-mark">
+                                        <img src="images/star.png">
+                                        <p class="item-mark-num">4,87 / 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                <div class="item p-3">
+                                    <div class="item-foto">
+                                        <img src="images/student1.png" class="d-block w-100">
+                                        <div class="item-name">
+                                            <p class="item-name1 fw-bold mb-1">Имя Фамилия</p>
+                                            <p class="item-subname"><small>Студент курса «WEB-разработчик»</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-describe">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Ut feugiat nisl at augue dapibus, id tristique.</p>
+                                    </div>
+                                    <div class="item-mark">
+                                        <img src="images/star.png">
+                                        <p class="item-mark-num">4,87 / 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="20000">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 item1">
+                                <div class="item p-3">
+                                    <div class="item-foto">
+                                        <img src="images/student2.png" class="d-block w-100">
+                                        <div class="item-name">
+                                            <p class="item-name1 fw-bold mb-1">Имя Фамилия</p>
+                                            <p class="item-subname"><small>Студент курса «WEB-разработчик»</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-describe">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Ut feugiat nisl at augue dapibus, id tristique.</p>
+                                    </div>
+                                    <div class="item-mark">
+                                        <img src="images/star.png">
+                                        <p class="item-mark-num">4,87 / 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                <div class="item p-3">
+                                    <div class="item-foto">
+                                        <img src="images/student1.png" class="d-block w-100">
+                                        <div class="item-name">
+                                            <p class="item-name1 fw-bold mb-1">Имя Фамилия</p>
+                                            <p class="item-subname"><small>Студент курса «WEB-разработчик»</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-describe">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus!</p>
+                                    </div>
+                                    <div class="item-mark">
+                                        <img src="images/star.png">
+                                        <p class="item-mark-num">4,87 / 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 item1">
+                                <div class="item p-3">
+                                    <div class="item-foto">
+                                        <img src="images/student3.png" class="d-block w-100">
+                                        <div class="item-name">
+                                            <p class="item-name1 fw-bold mb-1">Имя Фамилия</p>
+                                            <p class="item-subname"><small>Студент курса «WEB-разработчик»</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-describe">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                    <div class="item-mark">
+                                        <img src="images/star.png">
+                                        <p class="item-mark-num">4,87 / 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12" data-bs-interval="20000">
+                                <div class="item p-3">
+                                    <div class="item-foto">
+                                        <img src="images/student2.png" class="d-block w-100">
+                                        <div class="item-name">
+                                            <p class="item-name1 fw-bold mb-1">Имя Фамилия</p>
+                                            <p class="item-subname"><small>Студент курса «WEB-разработчик»</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-describe">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Ut feugiat nisl at augue dapibus, id tristique.</p>
+                                    </div>
+                                    <div class="item-mark">
+                                        <img src="images/star.png">
+                                        <p class="item-mark-num">4,87 / 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 item1">
+                                <div class="item p-3">
+                                    <div class="item-foto">
+                                        <img src="images/student1.png" class="d-block w-100">
+                                        <div class="item-name">
+                                            <p class="item-name1 fw-bold mb-1">Имя Фамилия</p>
+                                            <p class="item-subname"><small>Студент курса «WEB-разработчик»</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-describe">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Ut feugiat nisl at augue dapibus, id tristique.</p>
+                                    </div>
+                                    <div class="item-mark">
+                                        <img src="images/star.png">
+                                        <p class="item-mark-num">4,87 / 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                <div class="item p-3">
+                                    <div class="item-foto">
+                                        <img src="images/student3.png" class="d-block w-100">
+                                        <div class="item-name">
+                                            <p class="item-name1 fw-bold mb-1">Имя Фамилия</p>
+                                            <p class="item-subname"><small>Студент курса «WEB-разработчик»</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-describe">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Ut feugiat nisl at augue dapibus, id tristique.</p>
+                                    </div>
+                                    <div class="item-mark">
+                                        <img src="images/star.png">
+                                        <p class="item-mark-num">4,87 / 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                <div class="item p-3">
+                                    <div class="item-foto">
+                                        <img src="images/student2.png" class="d-block w-100">
+                                        <div class="item-name">
+                                            <p class="item-name1 fw-bold mb-1">Имя Фамилия</p>
+                                            <p class="item-subname"><small>Студент курса «WEB-разработчик»</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-describe">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nisl at augue dapibus!</p>
+                                    </div>
+                                    <div class="item-mark">
+                                        <img src="images/star.png">
+                                        <p class="item-mark-num">4,87 / 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                                <div class="item p-3">
+                                    <div class="item-foto">
+                                        <img src="images/student1.png" class="d-block w-100">
+                                        <div class="item-name">
+                                            <p class="item-name1 fw-bold mb-1">Имя Фамилия</p>
+                                            <p class="item-subname"><small>Студент курса «WEB-разработчик»</small></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-describe">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                    <div class="item-mark">
+                                        <img src="images/star.png">
+                                        <p class="item-mark-num">4,87 / 5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div class="container">
+        <img src="images/owl.png" class="footer-owl" width="20%">
+    </div>
+
+    <footer>
+        <div class="footer-body container">
+            
+            <div class="row">
+                <div class="footer-info col-md-3">
+                    <img src="images/logo-footer.png" class="img-info mb-4">
+                    <h2 class="mb-3">8 800 950-33-98</h2>
+                    <p>г. Москва, ул. Ленина, д. 50</p>
+                    <p>info@hodfuture academy.ru</p>
+                    <div class="footer-icons">
+                        <img src="images/vk.png">
+                        <img src="images/insta.png">
+                        <img src="images/facebook.png">
+                        <img src="images/youtube.png">
+                        <img src="images/telegram.png">
+                    </div>
+                    <div class="footer-end mt-4">
+                        © ХОД, Future Academy
+                    </div>
+                </div>
+
+                <div class="row col-md-9 footer-points pt-5 pb-5">
+                    <ul class="col-md">
+                        <h3>Детям</h3>
+                        <li><a href="#">Робототехника</a></li>
+                        <li><a href="#">Создание игр</a></li>
+                        <li><a href="#">Программирование</a></li>
+                    </ul>
+                    <ul class="col-md">
+                        <h3>Подросткам</h3>
+                        <li><a href="#">Web-разработка</a></li>
+                        <li><a href="#">Прикладное программирование</a></li>
+                        <li><a href="#">Графическое моделирование</a></li>
+                    </ul>
+                    <ul class="col-md">
+                        <h3>Взрослым</h3>
+                        <li><a href="#">Разработчик игр на Unity</a></li>
+                        <li><a href="#">Разработка ПО</a></li>
+                        <li><a href="#">Графический дизайн</a></li>
+                    </ul>
+                    <ul class="col-md">
+                        <h3>Информация</h3>
+                        <li><a href="#">Об академии</a></li>
+                        <li><a href="#">Мероприятия</a></li>
+                        <li><a href="#">Новости</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+        })
+    </script>
+    <script>
+        $('#multiCarousel').carousel({
+            interval: 10000
+            })
+        $('.carousel .carousel-item').each(function(){
+            var next = $(this).next();
+            if (!next.length) {
+            next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i=0;i<2;i++) {
+                next=next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
+</body>
+</html>
